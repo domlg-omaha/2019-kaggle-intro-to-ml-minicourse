@@ -1,0 +1,11 @@
+version: "3"
+services:
+    local-data-science-notebook:
+        build: .
+        user: root
+        restart: "no"
+        volumes:
+            - "./storage:/root/storage"
+            - "./datasets:/root/datasets"
+        ports:
+            - "8888:8888"
